@@ -250,6 +250,10 @@ module picorv32 #(
 	wire [31:0] dbg_reg_x29 = cpuregs[29];
 	wire [31:0] dbg_reg_x30 = cpuregs[30];
 	wire [31:0] dbg_reg_x31 = cpuregs[31];
+	wire [31:0] dbg_reg_x32 = cpuregs[32];
+	wire [31:0] dbg_reg_x33 = cpuregs[33];
+	wire [31:0] dbg_reg_x34 = cpuregs[34];
+	wire [31:0] dbg_reg_x35 = cpuregs[35];
 `endif
 
 	// Internal PCPI Cores
@@ -2519,6 +2523,7 @@ module picorv32_axi #(
 	parameter [ 0:0] ENABLE_COUNTERS64 = 1,
 	parameter [ 0:0] ENABLE_REGS_16_31 = 1,
 	parameter [ 0:0] ENABLE_REGS_DUALPORT = 1,
+	parameter [ 0:0] LATCHED_MEM_RDATA = 0,
 	parameter [ 0:0] TWO_STAGE_SHIFT = 1,
 	parameter [ 0:0] BARREL_SHIFTER = 0,
 	parameter [ 0:0] TWO_CYCLE_COMPARE = 0,
@@ -2650,6 +2655,7 @@ module picorv32_axi #(
 		.ENABLE_COUNTERS64   (ENABLE_COUNTERS64   ),
 		.ENABLE_REGS_16_31   (ENABLE_REGS_16_31   ),
 		.ENABLE_REGS_DUALPORT(ENABLE_REGS_DUALPORT),
+		.LATCHED_MEM_RDATA   (LATCHED_MEM_RDATA   ),
 		.TWO_STAGE_SHIFT     (TWO_STAGE_SHIFT     ),
 		.BARREL_SHIFTER      (BARREL_SHIFTER      ),
 		.TWO_CYCLE_COMPARE   (TWO_CYCLE_COMPARE   ),
