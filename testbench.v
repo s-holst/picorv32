@@ -75,6 +75,7 @@ module testbench #(
 			$dumpvars(1, testbench.top.uut.picorv32_core.decoded_imm_j);
 			$dumpvars(1, testbench.top.uut.picorv32_core.mem_addr);
 			$dumpvars(1, testbench.top.uut.picorv32_core.mem_wdata);
+			$dumpvars(1, testbench.top.uut.picorv32_core.mem_la_wdata);
 			$dumpvars(1, testbench.top.uut.picorv32_core.mem_rdata_q);
 			$dumpvars(1, testbench.top.uut.picorv32_core.trace_data);
 			$dumpvars(1, testbench.top.uut.picorv32_core.timer);
@@ -186,8 +187,11 @@ module testbench #(
 			$dumpvars(1, testbench.top.uut.picorv32_core.genblk2.pcpi_div.pcpi_wait);
 			$dumpvars(1, testbench.top.uut.picorv32_core.genblk2.pcpi_div.pcpi_wait_q);
 			$dumpvars(1, testbench.top.uut.picorv32_core.genblk2.pcpi_div.pcpi_wr);
+			$dumpvars(1, testbench.top.uut.picorv32_core.genblk2.pcpi_div.pcpi_ready);
 			$dumpvars(1, testbench.top.uut.picorv32_core.genblk1.pcpi_mul.rs2);
 			$dumpvars(1, testbench.top.uut.picorv32_core.genblk1.pcpi_mul.rs1);
+			$dumpvars(1, testbench.top.uut.picorv32_core.genblk1.pcpi_mul.next_rs1);
+			$dumpvars(1, testbench.top.uut.picorv32_core.genblk1.pcpi_mul.next_rs2);
 			$dumpvars(1, testbench.top.uut.picorv32_core.genblk1.pcpi_mul.rd);
 			$dumpvars(1, testbench.top.uut.picorv32_core.genblk1.pcpi_mul.rdx);
 			$dumpvars(1, testbench.top.uut.picorv32_core.genblk1.pcpi_mul.instr_mul);
@@ -201,6 +205,7 @@ module testbench #(
 			$dumpvars(1, testbench.top.uut.picorv32_core.genblk1.pcpi_mul.pcpi_wait);
 			$dumpvars(1, testbench.top.uut.picorv32_core.genblk1.pcpi_mul.pcpi_wait_q);
 			$dumpvars(1, testbench.top.uut.picorv32_core.genblk1.pcpi_mul.pcpi_wr);
+			$dumpvars(1, testbench.top.uut.picorv32_core.genblk1.pcpi_mul.pcpi_ready);
 			$dumpvars(1, testbench.top.uut.picorv32_core.eoi);
 			$dumpvars(1, testbench.top.uut.picorv32_core.decoded_rd);
 			$dumpvars(1, testbench.top.uut.picorv32_core.decoded_rs1);
